@@ -14,11 +14,14 @@
 
 <h1>My site</h1>
 <p>I am Egor Baykin. This is my test site</p>
-<p>Paragraph</p>
+<p ondragstart="dragStart(event)" draggable="true" drag_id="text">Text</p>
 
-<img src="images/gr.png" alt="" class="gr gr1" unselectable="on">
-<img src="images/gr.png" alt="" class="gr gr2" unselectable="on">
+<div ondragover="dragOver(event)" ondrop="drop(event)">Drop Zone</div>
+
+<div class="grc1"><img src="images/gr.png" alt="" class="gr gr1" unselectable="on"></div>
+<div class="grc2"><img src="images/gr.png" alt="" class="gr gr2" unselectable="on"></div>
 
 <script src="scripts/theme.js"></script>
+<script src="scripts/drag-and-drop.js"></script>
 </body>
 </html>

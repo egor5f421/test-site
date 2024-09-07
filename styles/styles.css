@@ -2,6 +2,7 @@
 body {
     color: white;
     background-color: black;
+    overflow-x: hidden;
 
     font-family: "Roboto Slab", "Arial", sans-serif, Serif;
     font-optical-sizing: auto;
@@ -16,15 +17,27 @@ h1 {
 }
 
 p {
+    width: max-content;
     font-size: 18pt;
 }
 
 
+.grc1 {
+    position: fixed;
+    left: -1000px;
+    top: -1000px;
+    z-index: -1;
+}
+.grc2 {
+    position: fixed;
+    right: -1000px;
+    bottom: -1000px;
+    z-index: -1;
+}
 .gr {
     width: 2000px;
     height: auto;
-    position: fixed;
-    z-index: -1;
+    position: relative;
 
     user-drag: none;
     -webkit-user-drag: none;
@@ -34,10 +47,16 @@ p {
     -ms-user-select: none;
 }
 .gr1 {
-    left: -1000px;
-    top: -1000px;
+    animation: gra alternate ease-in-out 1s infinite;
 }
 .gr2 {
-    right: -1000px;
-    bottom: -1000px;
+    animation: gra alternate-reverse ease-in-out 1s infinite;
+}
+@keyframes gra {
+    from {
+        top: -200px;
+    }
+    to {
+        top: 200px;
+    }
 }
